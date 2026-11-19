@@ -1,9 +1,9 @@
-name: Check Uzbekistan docs
+name: Check docs site
 on:
   push:
-    branches: [production-uz]
+    branches: [develop]
   pull_request:
-    branches: [production-uz]
+    branches: [develop, production]
   workflow_dispatch:
 jobs:
   build:
@@ -12,15 +12,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
-          repository: verificahub/verificahub-docs
-          ref: 9c5b5148e07e7f896326f0c4e18678ae7d6d0883
+          repository: verificahub/verificahub-docs-uz
+          ref: develop
           path: content-source
-          token: ${{ secrets.DOCS_REPO_TOKEN || github.token }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run typecheck
       - run: npm run build
         env:
           DOCS_CONTENT_DIR: ./content-source
