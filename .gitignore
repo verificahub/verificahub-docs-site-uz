@@ -1,0 +1,8 @@
+node_modules/
+build/
+.docusaurus/
+generated/
+i18n/
+content-source/
+static/links.json
+.DS_Store
