@@ -1,9 +1,8 @@
 name: Check docs site
+# Build check only; deploys run from deploy.yml on production.
 on:
-  push:
-    branches: [develop]
   pull_request:
-    branches: [develop, production]
+    branches: [production]
   workflow_dispatch:
 jobs:
   build:

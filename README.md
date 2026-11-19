@@ -6,10 +6,9 @@ Docusaurus site for `docs.verificahub.uz`, with Uzbek, Russian and English local
 
 Use Node.js 20 or newer. Check out the content repository alongside this one as `../verificahub-docs-uz`, then run `npm ci` and `npm start` or `npm run build`. Set `DOCS_CONTENT_DIR` to use a different checkout. The sync script replaces only the ignored `generated/`, `i18n/` and `static/links.json` output.
 
-## Branches and deployment
+## Branch and deployment
 
-- `develop`: work in progress. CI builds against the content repo's `develop` branch.
-- `production`: released. Every push deploys to GitHub Pages.
+This repository has a single branch, `production`, which is also the default branch. Every push deploys to GitHub Pages. Content changes go through `verificahub-docs-uz` (`develop` → `production`). The build check (`.github/workflows/check.yml`) runs on pull requests and manual runs against content `develop`, and never deploys.
 
 Deployment (`.github/workflows/deploy.yml`) runs when:
 
