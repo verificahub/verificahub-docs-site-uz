@@ -1,0 +1,5 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": { "baseUrl": ".", "skipLibCheck": true },
+  "exclude": [".docusaurus", "build", "generated", "i18n", "content-source"]
+}
