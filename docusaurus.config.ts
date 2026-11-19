@@ -9,7 +9,7 @@ const config: Config = {
   baseUrl: '/',
   trailingSlash: true,
   organizationName: 'verificahub',
-  projectName: 'verificahub-docs-site-uz',
+  projectName: 'verificahub-docs-site',
   onBrokenLinks: 'throw',
   i18n: {
     defaultLocale: 'uz',
